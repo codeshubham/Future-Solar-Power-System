@@ -1,15 +1,15 @@
 #include <Servo.h>
 
-Servo s;
+Servo sr;
 int l1,l2,a=10,error=65,ip=90;
 
 void setup() {
   pinMode(a,OUTPUT);
    pinMode(A1, INPUT);   
   pinMode(A0, INPUT);
-     s.attach(12);
+     sr.attach(12);
 Serial.begin(9600);
-s.write(90);
+sr.write(90);
 }
 
 void loop() {
@@ -34,6 +34,6 @@ if((diff1 <= error) || (diff2 <= error)) {
       ip=ip+1; 
     }
   }
- s.write(ip); 
+ sr.write(ip); 
   delay(100);
  }
